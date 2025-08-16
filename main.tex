@@ -1,0 +1,305 @@
+%-------------------------
+% Resume in Latex
+% Author: Huirem Nikhil Singh (Ece 2020 - 2024)
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Priyanshu Dwibedi} % Your Name
+\newcommand{\course}{Bachelors of Technology} % Your Program
+\newcommand{\roll}{B222037} % Your Roll No.
+\newcommand{\phone}{8889703636} % Your Phone Number
+\newcommand{\emaila}{priyanshu.dwibedi2004@gmail.com} %Email 1
+\newcommand{\emailb}{b222037@iiit-bh.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{passport_img.jpg}}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Electronics and Telecommunication Engineering} &  \href{https://github.com/PriyanshuDwibedi}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {International Institute of Information Technology, Bhubaneswar} & \href{https://www.linkedin.com/in/priyanshu-dwibedi-54ab65236/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology (IIIT), Bhubaneswar}{CGPA: 8.26}
+      {B.Tech, Electronics and Telecommunication Engineering}{2022-2026}
+    \resumeSubheading
+      {Gyan Ganga International Academy, Bhopal}{Percentage: 93.2}
+      {CBSE, Madhya Pradesh}{2022}
+    \resumeSubheading
+      {St. Joseph's co-ed school, Bhopal}{Percentage: 92.16}
+      {CBSE, Madhya Pradesh}{2020}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Endress+Hauser India Pvt. Ltd.}{Noida}
+      {Instrumentation sales Engineer (summer intern)}{1 july- 31 July 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item { Got the knowledge on instrumentation process automation industry and various kind of flowmeters used in various
+ industries.}
+    \item {Configured flowmeters on the basis of chemical properties, pressure drop, temperature and other physical properties
+ on the basis of client needs.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {Neophyte AI}{Navi Mumbai- Remote}
+      {Agentic AI intern}{15 May - 15 June 2025}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Worked on making an AI Agent for there database which helped retrive information from MongoDB.}
+    \item {Mainly worked on the tools which the agent worked on.}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {CampFindrr} %Project Name
+      {Full-stack project} %Project Name, Location Name
+      {} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: JavaScript, NodeJS, ExpressJS, MongoDB, HTML, CSS, Bootstrap, NPM}
+        \item {Developed a robust application designed to provide help to users in finding campgrounds all over the world for
+ camping. In this application users can upload new campgrounds and also can review other’s. Images can also be
+ uploaded to cloud. Users can also view the existing campgrounds on the map integrated in the website}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Career Alter Ego AI Agent} %Project Name
+      {Agentic AI Project} %Project Name, Location Name
+      {} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& Technologies Used: Python, Google Gemini 2.5 (OpenAI API), Gradio, PyPDF, dotenv, Requests, JSON Schema, Pushover API
+}
+        \item {Developed a personalized AI-powered career chatbot that represents me professionally, answers queries using my LinkedIn and summary data, and sends real-time notifications via Pushover for user engagement and unanswered questions.
+}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    \resumeProject
+      {SDR AI Agent} %Project Name
+      {Agentic AI Project} %Project Name, Location Name
+      {} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools Used: Python, OpenAI Agent SDK, dotenv, SendGrid API
+
+}
+        \item {Built an AI-powered assistant that follows given instructions, sends automated emails via SendGrid, and provides an interactive Gradio interface for seamless communication.
+
+
+}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{:C++, Python} \\
+     \textbf{Developer Tools}{: OpenAI Agents SDK, Node.js, Expess.js} \\
+     \textbf{Operating system}{: Windows} \\
+     \textbf{Databases}{: MongoDB, MySQL} \\
+     \textbf{Soft Skills}{: Leadership, critcal thinking, communication} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Joint Secretary, } % Position
+    {The Automation and Robotics Society} %Club,Event
+    {August 2024- April 2025} %Tenure Period
+\resumePOR{Placement Coordinator, } % Position
+    {Placement cell} %Club,Event
+    {May 2024- November 2024} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{} % Award
+    {JEE Mains, 93.2\%ile} % Event
+    {2022} %Event Year
+    
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
